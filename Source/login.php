@@ -23,7 +23,8 @@ $num_row= mysqli_num_rows($result);
 if($num_row==1){
 	$row = mysqli_fetch_array($result);
 	$_SESSION["class"]=$row['class'];
-	$_SESSION["id"]=$id;
+	$_SESSION["userid"]=$row['userid'];
+	$_SESSION["id"]=$phonenumber;
 	$_SESSION["logged"]=2;
 	$_SESSION["ranked"]=;
 	echo $_SESSION["id"];

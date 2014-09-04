@@ -24,11 +24,16 @@ if (!mysqli_query($con,$sql)) {
 $row = mysqli_fetch_array($result);
 mysqli_close($con);
 
-$sender = $_SESSION['id'];
-$receiver = $_POST['receiver'];
+$class = $_SESSION['class'];
+$sender = $_SESSION['userid'];
+$receiver = $_POST['to'];
+$subject = $_POST['subject'];
+if($receiver == "") {
+	$receiver = "Nurse";
+} else 
 $msg = $_POST['msg'];
 
-$sql="INSERT INTO message (senderid, reciever, message) VALUES ('$sender', '$receiver', '$msg')";
+$sql="INSERT INTO message (subject, sender, reciever, message) VALUES ('$subject', '$sender', '$receiver', '$msg')";
 
 if (!mysqli_query($con,$sql)) {
   //die('Error: ' . mysqli_error($con));
