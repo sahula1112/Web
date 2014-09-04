@@ -11,7 +11,7 @@ if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$sql="SELECT * FROM user WHERE phonenumber='$id' and password='$pass'";
+$sql="SELECT * FROM user WHERE phonenumber='$phonenumber' and password='$pass'";
 $result = mysqli_query($con,$sql) or die ( mysql_error() );
 
 
