@@ -114,7 +114,7 @@
                       echo "<td><a href='http://localhost/Web/Source/nurse/inbox.php?messageid=".$row['messageid']."'><button class='btn btn-success disabled'>Replyed</button></a></td>";
                     }
                     else{
-                      echo "<td><a href='http://localhost/Web/Source/nurse/reply.php?messageid=".$row['msgid']."&reciever=".$row['sender']."><button class='btn btn-danger'>Wating for reply</button></a></td>";
+                      echo "<td><a href='http://localhost/Web/Source/nurse/reply.php?messageid=".$row['msgid']."&reciever=".$row['sender']."'><button class='btn btn-danger'>Wating for reply</button></a></td>";
                     }
                     echo "</tr>";
                     echo "</tbody>";
