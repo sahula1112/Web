@@ -1,4 +1,5 @@
 <?php
+/*
 session_start();
 $host = "localhost";
 $username = "root";
@@ -23,6 +24,7 @@ if (!mysqli_query($con,$sql)) {
 
 $row = mysqli_fetch_array($result);
 mysqli_close($con);
+*/
 ?>
 
 

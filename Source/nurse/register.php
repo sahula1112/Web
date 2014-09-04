@@ -60,14 +60,13 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <div class="well cover-register">
-            <i class="fa fa-check-square-o  fa-5x margin-top-160 text-left-20">Register</i>
-            <div class="col-md-6 text-right">
+ 
+            <p class="font-bold margin-top-160 text-left"><i class="fa fa-check-square-o fa-5x  color-bule">Register</i></p>
+            <div class="col-md-6 text-right margin-top-50">
               <a href="patient-register.php"><button type="button" class="btn btn-primary btn-lg font-size-50"> Patient register</button></a>
             </div>
-            <div class="col-md-6 text-left">
+            <div class="col-md-6 text-left margin-top-50">
               <a href="nurse-register.php"><button type="button" class="btn btn-lg btn-success font-size-50"> Nurse register</button></a>
-
-              
           </div>
         </div>
           </div>
