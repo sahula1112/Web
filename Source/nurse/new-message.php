@@ -13,7 +13,7 @@ if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$id = $_GET['id'];
+$userid = $_SESSION['userid'];
 $_SESSION['cid'] = $id;
 $sql="SELECT * from conditions WHERE conditionid='". $id . "'";
 $result=mysqli_query($con,$sql);
