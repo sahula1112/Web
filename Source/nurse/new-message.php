@@ -14,7 +14,7 @@ if (mysqli_connect_errno()) {
 
 $id = $_GET['id'];
 $_SESSION['cid'] = $id;
-$sql="SELECT * from conditions WHERE ID_condition='". $id . "'";
+$sql="SELECT * from conditions WHERE conditionid='". $id . "'";
 $result=mysqli_query($con,$sql);
 
 if (!mysqli_query($con,$sql)) {
