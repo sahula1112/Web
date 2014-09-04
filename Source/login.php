@@ -26,7 +26,7 @@ if($num_row==1){
 	$_SESSION["class"]=$row['class'];
 	$_SESSION["userid"]=$row['userid'];
 	$_SESSION["phonenumber"]=$phonenumber;
-	$_SESSION["id"]=$row['fname'];
+	$_SESSION["id"]="Your name : ".$row['fname']." ".$row['lname'];
 	if($row["class"]==1){
 		header('location: nurse/nurse-home.php');
 	}

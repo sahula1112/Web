@@ -35,8 +35,8 @@
        <div class="col-md-4">
            <a href="nurse-home.php"><i class="fa fa-plus-square fa-5x"></i><p class="font-size-35 margin-left-15 font-bold inline">Easy Care |</p><p class="font-size-24 inline">Nurse</p></a>
         </div>
-        <div class="col-md-4 col-md-push-4">
-           <p class="text-right margin-top-31 margin-right-5 font-size-24"><? echo "YOUR name : ".$_SESSION["id"]." | "; ?><a href="../log-out.php" class="font-red">log out</a></p>
+        <div class="col-md-8 text-right">
+           <p class="text-right margin-top-31 margin-right-5 font-size-24"><? echo $_SESSION["id"]." | "; ?><button class="btn btn-danger btn-lg "><a href="../log-out.php" class="font-white">log out</a></button></p>
         </div>
       </div>
     </div>
@@ -46,11 +46,11 @@
           <nav class="navbar navbar-default" role="navigation">
             <div class="navbar-header">
               <ul class="nav nav-pills">
-                <li class="active"><a href="nurse-home.php"><i class="fa fa-home  fa-2x margin-top-20 "> HOME</i></a></li>
-                <li><a href="register.php"><i class="fa fa-check-square-o  fa-2x margin-top-20"> Register</i></a></li>
-                <li><a href="send-message.php"><i class="fa fa-comments-o fa-2x margin-top-20"> Message</i></a></li>
-                <li><a href="reply-condition-page.php?row=10"><i class="fa fa-envelope fa-2x margin-top-20"> Reply condition</i></a></li>
-                <li><a href="see-graph.php"><i class="fa fa-area-chart fa-2x margin-top-20"> See graph </i></a></li>
+                <li class="active"><a href="nurse-home.php"><i class="fa fa-home  fa-2x"> HOME</i></a></li>
+                <li><a href="register.php"><i class="fa fa-check-square-o  fa-2x"> Register</i></a></li>
+                <li><a href="send-message.php"><i class="fa fa-comments-o fa-2x"> Message</i></a></li>
+                <li><a href="reply-condition-page.php?row=10"><i class="fa fa-envelope fa-2x"> Reply condition</i></a></li>
+                <li><a href="see-graph.php"><i class="fa fa-area-chart fa-2x"> See graph </i></a></li>
               </ul>
              </div>
           </nav>
