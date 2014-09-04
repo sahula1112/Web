@@ -67,7 +67,7 @@
             <div class="col-md-6 text-left">
               <a href="nurse-register.php"><button type="button" class="btn btn-lg btn-success font-size-50"> Nurse register</button></a>
 
-              dfasfafdsgdsfgfsgsfgsdgdsgfdsdsadasdasdasdsadasdasdsadasdsadsads
+              
           </div>
         </div>
           </div>
