@@ -1,5 +1,5 @@
 body {
-	background: url('http://www.demo.amitjakhu.com/login-form/images/bg.png');
+	background: url('../../Resource/bg2.png');
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight:300;
 	text-align: left;
@@ -56,6 +56,9 @@ a{
 .background-color-blue{
 	background-color: blue;
 }
+.background-color-green{
+	background-color: green;
+}
 .background-color-white{
 	background-color: white;
 }
@@ -86,8 +89,14 @@ a{
 .color-bule{
 	color: #00BFFF;
 }
+.color-green{
+	color: rgba(71, 179, 66, 0.9);
+}
 .color-bule2{
-	color: rgba(62, 31, 255, 0.9);;
+	color: rgba(62, 31, 255, 0.9);
+}
+.color-red{
+	color:	red;
 }
 .inline{
 	display: inline;

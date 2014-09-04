@@ -9,7 +9,6 @@
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/stlye.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="homepage.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,7 +21,7 @@
 
     <!-- CODE START HERE -->
 
-   <div class="container">
+    <div class="container">
       <div class="row">
         <div class="col-md-4">
            <a href="index.html"><p class="font-size-35 margin-left-15 font-bold inline">Easy Care |</p><p class="font-size-24 inline">welcome</p></a>
@@ -38,18 +37,26 @@
         </div>
       </div>
     </div>
+
     <section>
-      
-      <div class="container">
-        <div class="row margin-top-100">
-          <div class="col-md-6 text-right">
-             <a href="login-patient.html"><button type="button" class="btn btn-primary navbar-btn btn-lg font-size-35">Patient</button></a> <p class="font-size-24 inline margin-left-20">or</p>
+      <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center"> Login </h1>
+        <div class="col-md-2 col-md-push-5">
+        <form role="form" action="login.php" method="post">
+           <div class="form-group">
+            <label>ID</label>
+            <input type="text" class="form-control" placeholder="Enter your ID" name="ID">
+           </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Enter your password" name="password">
           </div>
-          <div class="col-md-6 text-left">
-            <a href="login-nurse.html"><button type="button" class="btn btn-defualt navbar-btn btn-lg font-size-35">Nurse</button></a>
-          </div>
-        </div>
+          <p class="text-right"><button type="submit" class="btn btn-primary btn-lg ">Submit</button></p>
+        </form>
       </div>
+      </div>
+    </div>
     </section>
 
 

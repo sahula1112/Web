@@ -19,16 +19,16 @@ if (mysqli_connect_errno()) {
 }
 
 
-$sql="INSERT INTO user (password, fname, lname, citizen_ID, phonenumber, email, class)
+$sql="INSERT INTO user (password, fname, lname, citizenid, phonenumber, email, class)
 VALUES ('$pass','$firstname','$lastname','$citizen_id','$phonenumber','$e_mail','$class')";
 
 if (!mysqli_query($con,$sql)) {
-  die('Error: ' . mysqli_error($con));
-  //header('location:register-fail.php');
+  //die('Error: ' . mysqli_error($con));
+  header('location:register-fail.php');
 }
 else{
-	echo "1 record added";
-	//header('location:complete-register.php');
+	//echo "1 record added";
+	header('location:complete-register.php');
 }
 
 mysqli_close($con);

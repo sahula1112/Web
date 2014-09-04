@@ -2,7 +2,7 @@
   session_start();
   ob_start();
 
-  if($_SESSION["logged"] != 2){
+  if($_SESSION["class"] != 0){
   header('location: ../not-login.html');
   }
 ?>

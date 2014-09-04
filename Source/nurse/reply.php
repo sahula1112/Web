@@ -25,7 +25,14 @@ $row = mysqli_fetch_array($result);
 mysqli_close($con);
 ?>
 
+<?
+  session_start();
+  ob_start();
 
+  if($_SESSION["class"]!=1){
+  header('location: ../not-login.html');
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +75,7 @@ mysqli_close($con);
                 <li><a href="see-graph.php"><i class="fa fa-area-chart fa-2x margin-top-20"> See graph </i></a></li>
               </ul>
              </div>
-            <p class="text-right margin-top-31 margin-right-5 font-size-14"><? echo "YOUR ID : ".$_SESSION["id"]." | "; ?><a href="../log-out.php" class="font-red">log out</a></p>
+            <p class="text-right margin-top-31 margin-right-5 font-size-14"><? echo "YOUR name : ".$_SESSION["id"]." | "; ?><a href="../log-out.php" class="font-red">log out</a></p>
           </nav>
         </div>
       </div>

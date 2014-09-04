@@ -2,7 +2,7 @@
   session_start();
   ob_start();
 
-  if($_SESSION["id"]!=1){
+  if($_SESSION["class"]!=1){
   header('location: ../not-login.html');
   }
 ?>
@@ -50,7 +50,7 @@
                 <li><a href="see-graph.php"><i class="fa fa-area-chart fa-2x margin-top-20"> See graph </i></a></li>
               </ul>
              </div>
-            <p class="text-right margin-top-31 margin-right-5 font-size-14"><? echo "YOUR ID : ".$_SESSION["id"]." | "; ?><a href="../log-out.php" class="font-red">log out</a></p>
+            <p class="text-right margin-top-31 margin-right-5 font-size-14"><? echo "YOUR name : ".$_SESSION["id"]." | "; ?><a href="../log-out.php" class="font-red">log out</a></p>
           </nav>
         </div>
       </div>
@@ -71,12 +71,6 @@
           <table class="table table-striped">
 
           <form role="form" class="form-inline" action="register-patient.php" method="post">
-            <div class="form-group">
-              <label>Pateint_ID :</label>
-              <input type="text" class="form-control" name="patient-id" required>
-            </div>
-         
-          <br>
           
             <div class="form-group">
               <label>Phone number :</label>
@@ -88,13 +82,6 @@
             <div class="form-group">
               <label>Password :</label>
               <input type="text" class="form-control" name="password" required>
-            </div>
-         
-          <br>
-          
-            <div class="form-group">
-              <label>Re-password :</label>
-              <input type="text" class="form-control" name="re-password" required>
             </div>
          
           <br>
@@ -128,25 +115,11 @@
           <br>
           
             <div class="form-group">
-              <label>Birthday :</label>
-              <input type="text" class="form-control" name="birthday" required>
-            </div>
-         
-          <br>
-          
-            <div class="form-group">
               <label>E-mail :</label>
               <input type="text" class="form-control" name="e-mail" required>
             </div>
          
           <br>
-          
-            <div class="form-group">
-              <label>Weight :</label>
-              <input type="text" class="form-control" name="weight" required>
-            </div>
-          
-          <br>  
 
           <button type="submit" class="btn btn-primary btn-lg">Submit</button>    
         </form>   
