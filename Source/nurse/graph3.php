@@ -13,7 +13,7 @@ $password = "root";
 $database = "Easycare";
 
 $con=mysqli_connect($host,$username,$password,$database);
-$sql="SELECT * from conditions WHERE patient_ID='0000000001'";
+$sql="SELECT * from conditions WHERE patientid='0000000001'";
 $result=mysqli_query($con,$sql);
 $data = array();
 $date = array();
