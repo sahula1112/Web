@@ -113,7 +113,7 @@
 
                     }
                     else{
-                      echo "<td><a href='http://localhost/Web/Source/nurse/reply.php?messageid='><button class='btn btn-danger'>Wating for reply</button></a></td>";
+                      echo "asdas";
                     }
                     echo "</tr>";
                     echo "</tbody>";
