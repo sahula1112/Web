@@ -24,7 +24,8 @@ if($num_row==1){
 	
 	$row = mysqli_fetch_array($result);
 	$_SESSION["class"]=$row['class'];
-<<<<<<< HEAD
+	$_SESSION["userid"]=$row['userid'];
+	$_SESSION["phonenumber"]=$phonenumber;
 	$_SESSION["id"]=$row['fname'];
 	if($row["class"]==1){
 		header('location: nurse/nurse-home.php');
@@ -32,17 +33,6 @@ if($num_row==1){
 	else{
 		header('location: patient/patient-home.php');
 	}
-	
-	
-=======
-	$_SESSION["userid"]=$row['userid'];
-	$_SESSION["id"]=$phonenumber;
-	$_SESSION["logged"]=2;
-	$_SESSION["ranked"]=;
-	echo $_SESSION["id"];
-	echo "SUCCESS";
-	header('location: patient/patient-home.php');
->>>>>>> FETCH_HEAD
 }
 else{
 	header('location: login-fail.html');

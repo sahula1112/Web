@@ -55,21 +55,73 @@
         </div>
       </div>
     </div>
-
       <p class="text-center font-size-35">Inbox</p>
       <div class="conatainer">
         <div class="row">
-          <div class="col-md-8 col-md-push-2">
-            <div class="well bg">
-            <table class="table table-hover">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-6 col-md-push-3">
+            <div class="well bg-table">
+            <table class="table table-hover text-center">
             <thead>
-              <tr class="info">
-                <th>Date</th>
-                <th>ID patient</th>
-                <th>Subject</th>
+              <tr class="info text-center">
+                <th class="text-center">Date</th>
+                <th class="text-center">From</th>
+                <th class="text-center">Subject</th>
+                <th class="text-center">Status</th>
               </tr>
             </thead>
 
+            <?
+                  $idpatient;
+                  $startRow=0;
+                  $endRow=$_GET['row'];
+                  // Create connection
+                  $con=mysqli_connect("localhost","root","root","Easycare");
+
+                  // Check connection
+                  if (mysqli_connect_errno()) {
+                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                  }
+
+                  $sql1="select * from user where class = 0";
+                  $result1=mysqli_query($con,$sql1);
+
+                  while($a=mysqli_fetch_array($result1)){
+                  $userid = $a['userid'];
+                  $fname = $a['fname'];
+                  $lname = $a['lname'];
+                  $sql="SELECT * from message  WHERE sender='$userid'";
+                  $result=mysqli_query($con,$sql);
+
+                  if (!mysqli_query($con,$sql)) {
+                    die('Error: ' . mysqli_error($con));
+                  }
+                  
+
+                 
+
+                  while($row = mysqli_fetch_array($result)) {
+                    echo $row['class'];
+                    echo "<tbody>";
+                    echo "<tr>";
+                    echo "<td>".$row['date']."</td>";
+                    echo "<td>".$fname." ".$lname."</td>";
+                    echo "<td>".$row['subject']."</td>";
+                    if($row['status']==1){
+                      echo "<td><a href='http://localhost/Web/Source/nurse/inbox.php?id=".$row['ID_condition']."'><button class='btn btn-success disabled'>Replyed</button></a></td>";
+                      echo "<td><a href='http://localhost/Web/Source/nurse/edit-cond.php?id=".$row['ID_condition']."'><button class='btn btn-warning margin-left-15'>Edit</button></a></td>";
+                     
+                    }
+                    else{
+                      echo "<td><a href='http://localhost/Web/Source/nurse/reply.php?id=".$row['ID_condition']."'><button class='btn btn-danger'>Wating for reply</button></a></td>";
+                    }
+                    echo "</tr>";
+                    echo "</tbody>";
+                  }
+                  }
+                  mysqli_close($con);
+                ?>
 
           </table>
           <div class="container">
@@ -82,6 +134,8 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
         </div>
         </div>
       </div>

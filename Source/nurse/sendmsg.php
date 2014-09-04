@@ -12,18 +12,6 @@ if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$id = $_GET['id'];
-$_SESSION['cid'] = $id;
-$sql="SELECT * from conditions WHERE conditionid='". $id . "'";
-$result=mysqli_query($con,$sql);
-
-if (!mysqli_query($con,$sql)) {
-  die('Error: ' . mysqli_error($con));
-}
-
-$row = mysqli_fetch_array($result);
-mysqli_close($con);
-
 $class = $_SESSION['class'];
 $sender = $_SESSION['userid'];
 $receiver = $_POST['to'];
@@ -31,18 +19,22 @@ $subject = $_POST['subject'];
 if($receiver == "") {
 	$receiver = "Nurse";
 } else 
-$msg = $_POST['msg'];
+$msg = $_POST['message'];
 
-$sql="INSERT INTO message (subject, sender, reciever, message) VALUES ('$subject', '$sender', '$receiver', '$msg')";
+$sql="INSERT INTO message (subject, sender, receiver, message) VALUES ('$subject', '$sender', '$receiver', '$msg')";
 
 if (!mysqli_query($con,$sql)) {
-  //die('Error: ' . mysqli_error($con));
-  header('location:register-fail.php');
-  exit();
+  die('Error: ' . mysqli_error($con));
+  echo  $class;
+  echo  $sender;
+  echo  $receiver;
+  echo  $subject."<br>".$msg;
+  //header('location:register-fail.php');
+  
 }
 else{
 	echo "1 record added";
-	header('location:complete-register.php');
+	//header('location:complete-register.php');
 }
 mysqli_close($con);
 
