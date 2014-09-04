@@ -109,12 +109,11 @@
                     echo "<td>".$fname." ".$lname."</td>";
                     echo "<td>".$row['subject']."</td>";
                     if($row['status']==1){
-                      echo "<td><a href='http://localhost/Web/Source/nurse/inbox.php?id=".$row['ID_condition']."'><button class='btn btn-success disabled'>Replyed</button></a></td>";
-                      echo "<td><a href='http://localhost/Web/Source/nurse/edit-cond.php?id=".$row['ID_condition']."'><button class='btn btn-warning margin-left-15'>Edit</button></a></td>";
-                     
+                      echo "<td><a href='http://localhost/Web/Source/nurse/inbox.php?messageid=".$row['messageid']."'><button class='btn btn-success disabled'>Replyed</button></a></td>";
+
                     }
                     else{
-                      echo "<td><a href='http://localhost/Web/Source/nurse/reply.php?id=".$row['ID_condition']."'><button class='btn btn-danger'>Wating for reply</button></a></td>";
+                      echo "<td><a href='http://localhost/Web/Source/nurse/reply.php?messageid=".$row['msgid']."'&reciever=".$row['sender']."><button class='btn btn-danger'>Wating for reply</button></a></td>";
                     }
                     echo "</tr>";
                     echo "</tbody>";
