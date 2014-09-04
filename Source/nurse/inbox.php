@@ -33,10 +33,7 @@
     <div class="container">
       <div class="row">
        <div class="col-md-4">
-           <a href="nurse-home.php"><i class="fa fa-plus-square fa-5x"></i><p class="font-size-35 margin-left-15 font-bold inline">Easy Care |</p><p class="font-size-24 inline">Nurse</p></a>
-        </div>
-        <div class="col-md-8 text-right">
-           <p class="text-right margin-top-31 margin-right-5 font-size-24"><? echo $_SESSION["id"]." | "; ?><button class="btn btn-danger btn-lg "><a href="../log-out.php" class="font-white">log out</a></button></p>
+           <a href="nurse-home.php"><i class="fa fa-plus-square fa-5x color-blue"></i><p class="font-size-35 margin-left-15 font-bold inline">Easy Care |</p><p class="font-size-24 inline">Nurse</p></a>
         </div>
       </div>
     </div>
@@ -46,13 +43,14 @@
           <nav class="navbar navbar-default" role="navigation">
             <div class="navbar-header">
               <ul class="nav nav-pills">
-                <li class="active"><a href="nurse-home.php"><i class="fa fa-home  fa-2x"> HOME</i></a></li>
-                <li><a href="register.php"><i class="fa fa-check-square-o  fa-2x"> Register</i></a></li>
-                <li><a href="send-message.php"><i class="fa fa-comments-o fa-2x"> Message</i></a></li>
-                <li><a href="reply-condition-page.php?row=10"><i class="fa fa-envelope fa-2x"> Reply condition</i></a></li>
-                <li><a href="see-graph.php"><i class="fa fa-area-chart fa-2x"> See graph </i></a></li>
+                <li><a href="nurse-home.php"><i class="fa fa-home  fa-2x margin-top-20"> HOME</i></a></li>
+                <li><a href="register.php"><i class="fa fa-check-square-o  fa-2x margin-top-20"> Register</i></a></li>
+                <li><a href="send-message.php"><i class="fa fa-comments-o fa-2x margin-top-20"> Message</i></a></li>
+                <li><a href="reply-condition-page.php?row=10"><i class="fa fa-envelope fa-2x margin-top-20"> Reply condition</i></a></li>
+                <li><a href="see-graph.php"><i class="fa fa-area-chart fa-2x margin-top-20"> See graph </i></a></li>
               </ul>
              </div>
+            <p class="text-right margin-top-31 margin-right-5 font-size-14"><? echo "YOUR name : ".$_SESSION["id"]." | "; ?><a href="../log-out.php" class="font-red">log out</a></p>
           </nav>
         </div>
       </div>
@@ -86,7 +84,7 @@
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                   }
 
-                  $sql1="select * from user where class = 1";
+                  $sql1="select * from user where class = 0";
                   $result1=mysqli_query($con,$sql1);
 
                   while($a=mysqli_fetch_array($result1)){
@@ -115,7 +113,7 @@
 
                     }
                     else{
-                      echo "<td><a href='http://localhost/Web/Source/nurse/reply.php?messageid=".$row['msgid']."&reciever=".$row['sender']."><button class='btn btn-danger'>Wating for reply</button></a></td>";
+                      echo "<td><a href='http://localhost/Web/Source/nurse/reply.php?messageid=". $row['msgid']. "&reciever=" . $row['sender'] . "'><button class='btn btn-danger'>Wating for reply</button></a></td>";
                     }
                     echo "</tr>";
                     echo "</tbody>";
