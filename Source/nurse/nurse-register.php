@@ -70,12 +70,6 @@
           <div class="well well-lg bg font-white">
           <table class="table table-striped">
           <form role="form" class="form-inline" action="register-nurse.php" method="post">
-            <div class="form-group">
-              <label>Nurse ID : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-              <input type="text" class="form-control" name="patient-id" required>
-            </div>
-         
-          <br>
           
             <div class="form-group">
               <label>Phone number : &nbsp;&nbsp;</label>
@@ -86,14 +80,7 @@
           
             <div class="form-group">
               <label>Password : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-              <input type="text" class="form-control" name="password" required>
-            </div>
-         
-          <br>
-          
-            <div class="form-group">
-              <label>Re-password : &nbsp;&nbsp;&nbsp;</label>
-              <input type="text" class="form-control" name="re-password" required>
+              <input type="password" class="form-control" name="password" required>
             </div>
          
           <br>
