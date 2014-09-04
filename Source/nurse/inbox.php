@@ -110,7 +110,6 @@
                     echo "<td>".$row['subject']."</td>";
                     if($row['status']==1){
                       echo "<td><a href='http://localhost/Web/Source/nurse/inbox.php?messageid=".$row['messageid']."'><button class='btn btn-success disabled'>Replyed</button></a></td>";
-
                     }
                     else{
                       echo "asdas";
